@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff8ef;
+  --foreground: #23302e;
+  --surface: #ffffff;
+  --muted: #55615e;
+  --line: #eadcc9;
+  --soft: #fde7d3;
+  --primary: #b9480c;
+  --primary-foreground: #ffffff;
+  --accent: #0f4c4a;
+  --accent-foreground: #fff8ef;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-soft: var(--soft);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #14201f;
+    --foreground: #f6efe6;
+    --surface: #1b2a29;
+    --muted: #b7c2be;
+    --line: #2f4240;
+    --soft: #2b3b38;
+    --primary: #f59e5b;
+    --primary-foreground: #23160b;
+    --accent: #0f4c4a;
+    --accent-foreground: #fff8ef;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
